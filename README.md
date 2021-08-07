@@ -54,11 +54,12 @@ Examples:
 ## 3 Source file structure
 A source file consists of, **in order**:
 
-License or copyright information, if present
-Package statement
-Import statements
-Exactly one top-level class
-Exactly one blank line separates each section that is present.
+1. License or copyright information, if present
+2. Package statement
+3. Import statements
+4. Exactly one top-level class
+
+**Exactly one blank line** separates each section that is present.
 
 ### 3.1 License or copyright information, if present
 If license or copyright information belongs in a file, it belongs here.
@@ -115,25 +116,25 @@ Line break after the closing brace, *only* if that brace terminates a statement 
 Examples:
 ```java
 return () -> {
-  while (condition()) {
-    method();
-  }
+    while (condition()) {
+        method();
+    }
 };
 
 return new MyClass() {
-  @Override public void method() {
-    if (condition()) {
-      try {
-        something();
-      } catch (ProblemException e) {
-        recover();
-      }
-    } else if (otherCondition()) {
-      somethingElse();
-    } else {
-      lastThing();
+    @Override public void method() {
+        if (condition()) {
+            try {
+                something();
+            } catch (ProblemException e) {
+                recover();
+            }
+        } else if (otherCondition()) {
+            somethingElse();
+        } else {
+            lastThing();
+        }   
     }
-  }
 };
 ```
 
@@ -144,16 +145,19 @@ An empty block or block-like construct may be in K & R style (as described in Se
 
 Examples:
 ```java
-  // This is acceptable
-  void doNothing() {}
+// This is acceptable
+void doNothing() {}
 
-  // This is equally acceptable
-  void doNothingElse() {
-  }
-  // This is not acceptable: No concise empty blocks in a multi-block statement
-  try {
+// This is equally acceptable
+void doNothingElse() {
+}
+```
+
+```java
+// This is not acceptable: No concise empty blocks in a multi-block statement
+try {
     doSomething();
-  } catch (Exception e) {}
+} catch (Exception e) {}
 ```
 
 ## 4.2 Block indentation: +2 spaces
@@ -185,13 +189,13 @@ There is no comprehensive, deterministic formula showing exactly how to line-wra
 The prime directive of line-wrapping is: prefer to break at a **higher syntactic level**. Also:
 
 1. When a line is broken at a *non-assignment* operator the break comes before the symbol. (Note that this is not the same practice used in Derivasians Style for other languages, such as C++ and JavaScript.)
-  * This also applies to the following "operator-like" symbols:
-    * the dot separator (`.`)
-    * the two colons of a method reference (`::`)
-    * an ampersand in a type bound (`<T extends Foo & Bar>`)
-    * a pipe in a catch block (`catch (FooException | BarException e)`).
+    * This also applies to the following "operator-like" symbols:
+        * the dot separator (`.`)
+        * the two colons of a method reference (`::`)
+        * an ampersand in a type bound (`<T extends Foo & Bar>`)
+        * a pipe in a catch block (`catch (FooException | BarException e)`).
 2. When a line is broken at an *assignment operator* the break typically comes *after* the symbol, but either way is acceptable.
-  * This also applies to the "assignment-operator-like" colon in an enhanced `for` ("foreach") statement.
+    * This also applies to the "assignment-operator-like" colon in an enhanced `for` ("foreach") statement.
 3. A method or constructor name stays attached to the open parenthesis (`(`) that follows it.
 4. A comma (`,`) stays attached to the token that precedes it.
 5. A line is never broken adjacent to the arrow in a lambda, except that a break may come immediately after the arrow if the body of the lambda consists of a single unbraced expression. Examples:
@@ -219,8 +223,8 @@ Section 4.6.3 on Horizontal alignment addresses the discouraged practice of usin
 A single blank line always appears:
 
 1. *Between* consecutive members or initializers of a class: fields, constructors, methods, nested classes, static initializers, and instance initializers.
-  * **Exception:** A blank line between two consecutive fields (having no other code between them) is optional. Such blank lines are used as needed to create *logical groupings* of fields.
-  * **Exception:** Blank lines between enum constants are covered in Section 4.8.1.
+    * **Exception:** A blank line between two consecutive fields (having no other code between them) is optional. Such blank lines are used as needed to create *logical groupings* of fields.
+    * **Exception:** Blank lines between enum constants are covered in Section 4.8.1.
 2. As required by other sections of this document (such as Section 3, Source file structure, and Section 3.3, Import statements).
 
 A single blank line may also appear anywhere it improves readability, for example between statements to organize the code into logical subsections. A blank line before the first member or initializer, or after the last member or initializer of the class, is neither encouraged nor discouraged.
@@ -233,23 +237,23 @@ Beyond where required by the language or other style rules, and apart from liter
 1. Separating any reserved word, such as `if`, `for` or `catch`, from an open parenthesis (`(`) that follows it on that line
 2. Separating any reserved word, such as `else` or `catch`, from a closing curly brace (`}`) that precedes it on that line
 3. Before any open curly brace (`{`), with two exceptions:
-  * `@SomeAnnotation({a, b})` (no space is used)
-  * `String[][] x = {{"foo"}};` (no space is required between `{{`, by item 8 below)
+    * `@SomeAnnotation({a, b})` (no space is used)
+    * `String[][] x = {{"foo"}};` (no space is required between `{{`, by item 8 below)
 4. On both sides of any binary or ternary operator. This also applies to the following "operator-like" symbols:
-  * the ampersand in a conjunctive type bound: `<T extends Foo & Bar>`
-  * the pipe for a catch block that handles multiple exceptions: `catch (FooException | BarException e)`
-  * the colon (`:`) in an enhanced `for` ("foreach") statement
-  * the arrow in a lambda expression: `(String str) -> str.length()`
+    * the ampersand in a conjunctive type bound: `<T extends Foo & Bar>`
+    * the pipe for a catch block that handles multiple exceptions: `catch (FooException | BarException e)`
+    * the colon (`:`) in an enhanced `for` ("foreach") statement
+    * the arrow in a lambda expression: `(String str) -> str.length()`
 
-but not
+    but not
 
-  * the two colons (`::`) of a method reference, which is written like `Object::toString`
-  * the dot separator (`.`), which is written like `object.toString()`
+    * the two colons (`::`) of a method reference, which is written like `Object::toString`
+    * the dot separator (`.`), which is written like `object.toString()`
 5. After `,:;` or the closing parenthesis (`)`) of a cast
 6. On both sides of the double slash (`//`) that begins an end-of-line comment. Here, multiple spaces are allowed, but not required.
 7. Between the type and variable of a declaration: `List<String> list`
 8. Optional just inside both braces of an array initializer
-  * `new int[] {5, 6}` and `new int[] { 5, 6 }` are both valid
+    * `new int[] {5, 6}` and `new int[] { 5, 6 }` are both valid
 9. Between a type annotation and `[]` or `...`.
 
 This rule is never interpreted as requiring or forbidding additional space at the start or end of a line; it addresses only *interior* space.
@@ -280,14 +284,14 @@ After each comma that follows an enum constant, a line break is optional. Additi
 
 ```java
 private enum Answer {
-  YES {
-    @Override public String toString() {
-      return "yes";
-    }
-  },
+    YES {
+        @Override public String toString() {
+            return "yes";
+        }
+    },
 
-  NO,
-  MAYBE
+    NO,
+    MAYBE
 }
 ```
 
@@ -314,12 +318,12 @@ Any array initializer may optionally be formatted as if it were a "block-like co
 
 ```java
 new int[] {           new int[] {
-  0, 1, 2, 3            0,
-}                       1,
-                        2,
-new int[] {             3,
-  0, 1,               }
-  2, 3
+    0, 1, 2, 3            0,
+}                         1,
+                          2,
+new int[] {               3,
+    0, 1,             }
+    2, 3
 }                     new int[]
                           {0, 1, 2, 3}
 ```
@@ -340,15 +344,15 @@ Within a switch block, each statement group either terminates abruptly (with a `
 
 ```java
 switch (input) {
-  case 1:
-  case 2:
-    prepareOneOrTwo();
-    // fall through
-  case 3:
-    handleOneTwoOrThree();
-    break;
-  default:
-    handleLargeNumber(input);
+    case 1:
+    case 2:
+        prepareOneOrTwo();
+        // fall through
+    case 3:
+        handleOneTwoOrThree();
+        break;
+    default:
+        handleLargeNumber(input);
 }
 ```
 
@@ -457,7 +461,7 @@ final String nonStatic = "non-static";
 static final Set<String> mutableCollection = new HashSet<String>();
 static final ImmutableSet<SomeMutableType> mutableElements = ImmutableSet.of(mutable);
 static final ImmutableMap<String, SomeMutableType> mutableValues =
-    ImmutableMap.of("Ed", mutableInstance, "Ann", mutableInstance2);
+        ImmutableMap.of("Ed", mutableInstance, "Ann", mutableInstance2);
 static final Logger logger = Logger.getLogger(MyClass.getName());
 static final String[] nonEmptyArray = {"these", "can", "change"};
 ```
@@ -492,10 +496,10 @@ Beginning with the prose form of the name:
 
 1. Convert the phrase to plain ASCII and remove any apostrophes. For example, "Müller's algorithm" might become "Muellers algorithm".
 2. Divide this result into words, splitting on spaces and any remaining punctuation (typically hyphens).
-  * *Recommended:* if any word already has a conventional camel-case appearance in common usage, split this into its constituent parts (e.g., "AdWords" becomes "ad words"). Note that a word such as "iOS" is not really in camel case *per se*; it defies any convention, so this recommendation does not apply.
+    * *Recommended:* if any word already has a conventional camel-case appearance in common usage, split this into its constituent parts (e.g., "AdWords" becomes "ad words"). Note that a word such as "iOS" is not really in camel case *per se*; it defies any convention, so this recommendation does not apply.
 3. Now lowercase *everything* (including acronyms), then uppercase only the first character of:
-  * ... each word, to yield *upper camel case*, or
-  * ... each word except the first, to yield *lower camel case*
+    * ... each word, to yield *upper camel case*, or
+    * ... each word except the first, to yield *lower camel case*
 4. Finally, join all the words into a single identifier.
 
 Note that the casing of the original words is almost entirely disregarded. Examples:
@@ -526,10 +530,10 @@ When it truly is appropriate to take no action whatsoever in a catch block, the 
 
 ```java
 try {
-  int i = Integer.parseInt(response);
-  return handleNumericResponse(i);
+    int i = Integer.parseInt(response);
+    return handleNumericResponse(i);
 } catch (NumberFormatException ok) {
-  // it's not numeric; that's fine, just continue
+    // it's not numeric; that's fine, just continue
 }
 return handleTextResponse(response);
 ```
@@ -538,8 +542,8 @@ return handleTextResponse(response);
 
 ```java
 try {
-  emptyStack.pop();
-  fail();
+    emptyStack.pop();
+    fail();
 } catch (NoSuchElementException expected) {
 }
 ```
