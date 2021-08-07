@@ -160,8 +160,8 @@ try {
 } catch (Exception e) {}
 ```
 
-## 4.2 Block indentation: +2 spaces
-Each time a new block or block-like construct is opened, the indent increases by two spaces. When the block ends, the indent returns to the previous indent level. The indent level applies to both code and comments throughout the block. (See the example in Section 4.1.2, Nonempty blocks: K & R Style.)
+## 4.2 Block indentation: +4 spaces
+Each time a new block or block-like construct is opened, the indent increases by four spaces. When the block ends, the indent returns to the previous indent level. The indent level applies to both code and comments throughout the block. (See the example in Section 4.1.2, Nonempty blocks: K & R Style.)
 
 ### 4.3 One statement per line
 Each statement is followed by a line break.
@@ -211,10 +211,10 @@ Predicate<String> predicate = str ->
 
 > **Note:** The primary goal for line wrapping is to have clear code, not *necessarily* code that fits in the smallest number of lines.
 
-#### 4.5.2 Indent continuation lines at least +4 spaces
-When line-wrapping, each line after the first (each *continuation line*) is indented at least +4 from the original line.
+#### 4.5.2 Indent continuation lines at least +8 spaces
+When line-wrapping, each line after the first (each *continuation line*) is indented at least +8 from the original line.
 
-When there are multiple continuation lines, indentation may be varied beyond +4 as desired. In general, two continuation lines use the same indentation level if and only if they begin with syntactically parallel elements.
+When there are multiple continuation lines, indentation may be varied beyond +8 as desired. In general, two continuation lines use the same indentation level if and only if they begin with syntactically parallel elements.
 
 Section 4.6.3 on Horizontal alignment addresses the discouraged practice of using a variable number of spaces to align certain tokens with previous lines.
 
