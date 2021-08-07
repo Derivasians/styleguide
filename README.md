@@ -188,7 +188,7 @@ There is no comprehensive, deterministic formula showing exactly how to line-wra
 #### 4.5.1 Where to break
 The prime directive of line-wrapping is: prefer to break at a **higher syntactic level**. Also:
 
-1. When a line is broken at a *non-assignment* operator the break comes before the symbol. (Note that this is not the same practice used in Derivasians Style for other languages, such as C++ and JavaScript.)
+1. When a line is broken at a *non-assignment* operator the break comes before the symbol.
     * This also applies to the following "operator-like" symbols:
         * the dot separator (`.`)
         * the two colons of a method reference (`::`)
