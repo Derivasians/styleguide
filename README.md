@@ -1,11 +1,11 @@
 # Derivasians Java Style Guide
 
 ## 1 Introduction
-This document serves as the **complete** definition of Derivasians's coding standards for source code in the Java™ Programming Language. A Java source file is described as being in Google Style if and only if it adheres to the rules herein.
+This document serves as the **complete** definition of Derivasians's coding standards for source code in the Java™ Programming Language. A Java source file is described as being in Derivasians Style if and only if it adheres to the rules herein.
 
 Like other programming style guides, the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well. However, this document focuses primarily on the **hard-and-fast rules** that we follow universally, and avoids giving advice that isn't clearly enforceable (whether by human or tool).
 
-This document was heavily based off of the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
+This document was based off of the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html).
 
 ### 1.1 Terminology notes
 In this document, unless otherwise clarified:
@@ -16,7 +16,7 @@ The term comment always refers to implementation comments. We do not use the phr
 Other "terminology notes" will appear occasionally throughout the document.
 
 ### 1.2 Guide notes
-Example code in this document is **non-normative**. That is, while the examples are in Google Style, they may not illustrate the only stylish way to represent the code. Optional formatting choices made in examples should not be enforced as rules.
+Example code in this document is **non-normative**. That is, while the examples are in Derivasians Style, they may not illustrate the only stylish way to represent the code. Optional formatting choices made in examples should not be enforced as rules.
 
 ## 2 Source file basics
 ### 2.1 File name
@@ -184,7 +184,7 @@ There is no comprehensive, deterministic formula showing exactly how to line-wra
 #### 4.5.1 Where to break
 The prime directive of line-wrapping is: prefer to break at a **higher syntactic level**. Also:
 
-1. When a line is broken at a *non-assignment* operator the break comes before the symbol. (Note that this is not the same practice used in Google style for other languages, such as C++ and JavaScript.)
+1. When a line is broken at a *non-assignment* operator the break comes before the symbol. (Note that this is not the same practice used in Derivasians Style for other languages, such as C++ and JavaScript.)
   * This also applies to the following "operator-like" symbols:
     * the dot separator (`.`)
     * the two colons of a method reference (`::`)
@@ -415,7 +415,7 @@ public protected private abstract default static final transient volatile synchr
 ### 5.1 Rules common to all identifiers
 Identifiers use only ASCII letters and digits, and, in a small number of cases noted below, underscores. Thus each valid identifier name is matched by the regular expression `\w+`.
 
-In Derivasians Style, special prefixes or suffixes are **not** used. For example, these names are not Google Style: `name_`, `mName`, `s_name` and `kName`.
+In Derivasians Style, special prefixes or suffixes are **not** used. For example, these names are not Derivasians Style: `name_`, `mName`, `s_name` and `kName`.
 
 ### 5.2 Rules by identifier type
 #### 5.2.1 Package names
@@ -486,7 +486,7 @@ Each type variable is named in one of two styles:
 * A name in the form used for classes (see Section 5.2.2, Class names), followed by the capital letter `T` (examples: `RequestT`, `FooBarT`).
 
 ### 5.3 Camel case: defined
-Sometimes there is more than one reasonable way to convert an English phrase into camel case, such as when acronyms or unusual constructs like "IPv6" or "iOS" are present. To improve predictability, Google Style specifies the following (nearly) deterministic scheme.
+Sometimes there is more than one reasonable way to convert an English phrase into camel case, such as when acronyms or unusual constructs like "IPv6" or "iOS" are present. To improve predictability, Derivasians Style specifies the following (nearly) deterministic scheme.
 
 Beginning with the prose form of the name:
 
