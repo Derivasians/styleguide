@@ -600,7 +600,7 @@ This is a fragment—a noun phrase or verb phrase, not a complete sentence. It d
 ### 7.3 Where Javadoc is used
 At the *minimum*, Javadoc is present for every `public` class, and every `public` or `protected` member of such a class, with a few exceptions noted below.
 
-Additional Javadoc content may also be present, as explained in Section 7.3.4, Non-required Javadoc.
+Additional Javadoc content may also be present, as explained in Section 7.3.3, Non-required Javadoc.
 
 #### 7.3.1 Exception: self-explanatory methods
 Javadoc is optional for "simple, obvious" methods like `getFoo`, in cases where there *really and truly* is nothing else worthwhile to say but "Returns the foo".
@@ -610,7 +610,7 @@ Javadoc is optional for "simple, obvious" methods like `getFoo`, in cases where 
 #### 7.3.2 Exception: overrides
 Javadoc is not always present on a method that overrides a supertype method.
 
-#### 7.3.4 Non-required Javadoc
+#### 7.3.3 Non-required Javadoc
 Other classes and members have Javadoc as *needed or desired*.
 
 Whenever an implementation comment would be used to define the overall purpose or behavior of a class or member, that comment is written as Javadoc instead (using `/**`).
